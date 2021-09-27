@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  /*primary*/
+  --soft-red :hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturate-cyan:hsl(167, 40%, 24%);
+  --dark-blue:hsl(198, 62%, 26%);
+  --dark-moderate-cyan:hsl(168, 34%, 41%);
+  /*neutral*/
+  --verydark-des-blue:hsl(212, 27%, 19%);
+  --verydark-grayish-blue:hsl(213, 9%, 39%);
+  --dark-grayish-blue:hsl(232, 10%, 55%);
+  --grayish-blue:hsl(210, 4%, 67%);
+}
+.container{
+  overflow: hidden;
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+.decorate{
+  background-image: url('./images/mobile/image-gallery-cone.jpg') ,url('./images/mobile/image-gallery-milkbottles.jpg') ,url('./images/mobile/image-gallery-orange.jpg') ,url('./images/mobile/image-gallery-sugar-cubes.jpg');
+  background-repeat: no-repeat;
+  background-size:50%;
+  background-position: left bottom, left top,right top, right bottom;
+  height:100vw;
+
+}
+@media only screen and (min-width:1024px){
+  .decorate{
+      position: relative;
+      background-image: url('./images/desktop/image-gallery-milkbottles.jpg'),url('./images/desktop/image-gallery-sugarcubes.jpg');
+      background-size: 25% ;
+      background-position:left,right;
+      height: 400px;
+  }
+  .decorate::before{
+      position: absolute;
+      background-image: url("./images/desktop/image-gallery-orange.jpg"),url('./images/desktop/image-gallery-cone.jpg');
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: left,right;
+      content:'';
+      width: 50%;
+      left:337px;
+      height: 100%;
+  }
+}

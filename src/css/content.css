@@ -1,0 +1,125 @@
+section{
+    width: 100vw;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+}
+h2{
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+}
+p{
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.6;
+    color: var(--verydark-grayish-blue);
+}
+b{
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+section:nth-of-type(1){
+    background-image: url("../images/mobile/image-transform.jpg");
+}
+section:nth-of-type(3){
+    background-image: url("../images/mobile/image-stand-out.jpg");
+}
+section:nth-of-type(5){
+    align-items: flex-end ;
+    height: 550px;
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+}
+section:nth-of-type(6){
+    height: 550px;
+    background-image: url("../images/mobile/image-photography.jpg");
+}
+@media only screen  and (min-width:1024px){
+    .content-container{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    section{
+        position: relative;
+        width: 50%;
+        height: 600px;
+        justify-content: center;
+        text-align: left;
+        line-height: 1.2;
+        padding: 120px;
+        justify-content: space-evenly;
+        transition: 1s;
+    }
+    section b{
+        transition: .5s;
+    }
+    section:nth-of-type(2) b:hover{
+        cursor: pointer;
+        border-bottom: 2px solid yellow;
+    }
+    section:nth-of-type(4) b:hover{
+        cursor: pointer;
+        border-bottom: 2px solid red;
+    }
+    section h2{
+        font-size: 45px;
+    }   
+    section:nth-of-type(1){
+        background-image: url("../images/desktop/image-transform.jpg");
+        order: 2;
+
+    }
+    section:nth-of-type(2){
+        order: 1;
+
+    }
+    section:nth-of-type(3){
+        background-image: url("../images/desktop/image-stand-out.jpg");
+        order: 3;
+    }
+    section:nth-of-type(4){
+        order: 4;
+    }
+    section:nth-of-type(5){
+        background-image: url("../images/desktop/image-graphic-design.jpg");
+        order: 5;
+    }
+    section:nth-of-type(6){
+        background-image: url("../images/desktop/image-photography.jpg");
+        order: 6;
+    }
+    section:nth-of-type(5),section:nth-of-type(6){
+        text-align: center;
+        justify-content: flex-end;
+        padding: 50px 200px;
+    }
+    section:nth-of-type(5) h2{
+        font-size: 30px;
+    }
+    section:nth-of-type(6) h2{
+        font-size: 30px;
+    }
+    .section-3,.section-5{
+        right:700px;
+    }
+    .section-2{
+        left:-700px;
+    }
+    .section-1{
+        right:-700px;
+    }
+    .section-4,.section-6{
+        left: 700px;
+    }
+
+    .active-section-even{
+        left:0;
+    }
+    .active-section-odd{
+        right:0;
+    }
+}

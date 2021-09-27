@@ -1,0 +1,34 @@
+footer{
+    background-color: var(--dark-moderate-cyan);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+footer ul{
+    background: transparent;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer li{
+    color:var(--dark-blue);
+    text-transform: capitalize;
+}
+footer h1{
+    color:var(--dark-desaturate-cyan);
+    font-size: 30px;
+    font-family: 'Barlow', sans-serif;
+}
+a{
+    margin:0 10px;
+}
+footer li:hover{
+    color:white;
+}
+@media only screen and (min-width:1024px){
+    footer ul{
+        width: 25%;
+        justify-content: space-evenly;
+    }
+}
